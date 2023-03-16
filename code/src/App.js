@@ -1,12 +1,20 @@
-import React from 'react';
-import data from './data.json';
+/* eslint-disable */ 
 
-console.log(data);
+import React from 'react';
+import { Header } from 'components/Header';
+import { Albums } from 'components/Albums';
+import { Playlists } from 'components/Playlists';
+import Dropup from 'components/Dropup';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Header headerNameInput="New Albums" />
+      <Albums albumTypeInput="album" />
+      <Header headerNameInput="New Singles" />
+      <Albums albumTypeInput="single" />
+      <Dropup />
+      <Playlists />
     </div>
   );
 }
